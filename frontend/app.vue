@@ -7,8 +7,8 @@
 </template>
 
 <style>
+.router-link-active, .router-link-exact-active {@apply underline}
 h1 { @apply font-bold text-2xl}
 h2 { @apply font-bold text-xl}
-.router-link-active, .router-link-exact-active {@apply underline}
-
+p { @apply mb-4}
 </style>

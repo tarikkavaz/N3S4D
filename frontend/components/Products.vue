@@ -5,8 +5,8 @@
       <Meta name="description" content="N3S4D - Products"/>
     </Head>
     <template v-if="products.length">
-      <ul class="bg-yellow-200 ">
-        <li v-for="product in products" :key="product.id" class="p-8 text-sm border-b-2 border-b-white">
+      <ul class="">
+        <li v-for="product in products" :key="product.id" class="p-8 text-sm bg-yellow-200 border-b-2 border-b-white hover:bg-yellow-300">
           <nuxt-link :to="{
             name: 'products-id-slug',
             params: {
@@ -18,7 +18,7 @@
           <div v-html="markdownToHtml(product.attributes.Body)" class="mb-4"></div>
           <p class="mb-4">${{ product.attributes.Prices }}</p>
           <p class="mb-4" v-if="product.attributes.Image.data">
-            <img :src="product.attributes.Image.data.attributes.url" :alt="product.attributes.Title">
+            <img class="max-w-xs" :src="product.attributes.Image.data.attributes.url" :alt="product.attributes.Title">
           </p>
           </nuxt-link>
         </li>
