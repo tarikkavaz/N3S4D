@@ -1,4 +1,4 @@
-# Nuxt 3 & Strapi 4 in Docker 
+# N3S4D: Nuxt 3 & Strapi 4 in Docker 
 
 This is a Boilerplate made with [Nuxt.js 3](https://nuxt.com/) and [Strapi 4](https://docs.strapi.io/dev-docs/quick-start#_1-install-strapi-and-create-a-new-project) wrapped in a Docker Container. 
 
@@ -6,7 +6,7 @@ This is a Boilerplate made with [Nuxt.js 3](https://nuxt.com/) and [Strapi 4](ht
 
 ```bash
 git clone git@github.com:tarikkavaz/N3S4D.git
-cd NuxtStrapiDocker #Run all commands from here 
+cd N3S4D #Run all commands from here 
 cp backend/.env.example backend/.env
 cp frontend/utils/api.js.example frontend/utils/api.js
 yarn install
