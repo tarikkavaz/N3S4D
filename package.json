@@ -1,0 +1,15 @@
+{
+  "name": "nuxtstrapidocker",
+  "private": true,
+  "version": "0.1.0",
+  "description": "NuxtStrapiDocker",
+  "scripts": {
+    "setup": "concurrently \"yarn --cwd frontend install\" \"yarn --cwd backend install\"",
+    "dev": "concurrently \"yarn --cwd backend run develop\" \"yarn --cwd frontend run dev\"",
+    "prod": "concurrently \"yarn --cwd backend run develop\" \"yarn --cwd frontend run prod\"",
+    "build": "concurrently \"yarn --cwd backend run build\" \"yarn --cwd frontend run build\""
+  },
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
+}

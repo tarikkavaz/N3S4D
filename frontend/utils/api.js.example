@@ -1,0 +1,14 @@
+import axios from 'axios';
+
+export const baseUrl = process.env.NODE_ENV === 'development'
+  ? 'http://localhost:1337/api'
+  : 'https://nsd.newtablab.com/api';
+
+export const api = (endpoint) => {
+  console.log(`Calling API endpoint: ${baseUrl}${endpoint}`);
+  return axios.get(`${baseUrl}${endpoint}`)
+    .then(response => response.data)
+    .catch(error => console.error(error));
+};
+
+export default api;
