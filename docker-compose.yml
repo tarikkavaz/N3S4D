@@ -9,7 +9,7 @@ services:
       - backend
       - frontend
     networks:
-      - app_network
+      - app_nsp_network
   
   backend:
     build:
@@ -29,7 +29,7 @@ services:
       - ./data:/tmp # map local data directory to container
     restart: always
     networks:
-      - app_network
+      - app_nsp_network
 
   frontend:
     build:
@@ -39,7 +39,7 @@ services:
       - 24678:24678
     restart: always
     networks:
-      - app_network
+      - app_nsp_network
     depends_on:
       - backend
     environment:
@@ -47,5 +47,5 @@ services:
       API_URL: http://backend:1337/api
 
 networks:
-  app_network:
+  app_nsp_network:
     driver: bridge
